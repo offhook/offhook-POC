@@ -7,7 +7,7 @@
   },
   "ubuntu": {
     "title": "Ubuntu 19.04",
-    "image": "disco",
+    "image": "ubuntu:19.04",
     "script": "ubuntu.sh",
     "additional_files": []
   }
