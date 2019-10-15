@@ -1,4 +1,5 @@
 #!/bin/bash
+# Source: https://access.redhat.com/solutions/10154
 
 # TODO: Enable EPEL repository
 
