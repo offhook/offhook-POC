@@ -55,11 +55,7 @@ def download_packages(packages, env_details):
         mounts=build_mounts_list(env_details),
         working_dir=CONTAINER_BASE_DIR,
     )
-    if exists(join(HOST_DL_DIR, 'partial')):
-        rmdir(join(HOST_DL_DIR, 'partial'))
-    if exists(join(HOST_DL_DIR, 'lock')):
-        remove(join(HOST_DL_DIR, 'lock'))
 
 
 dl_envs = read_environments(ENVIRONMENTS_FILE_PATH)
-download_packages('nano', dl_envs['centos7'])
+download_packages('nano', dl_envs['ubuntu'])

@@ -3,3 +3,6 @@
 
 apt-get update
 apt-get --download-only -o Dir::Cache::archives=$DOWNLOAD_DIR install -y $*
+cd $DOWNLOAD_DIR
+rm -rf partial
+rm lock
