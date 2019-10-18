@@ -1,5 +1,6 @@
 import json
-from os.path import join, abspath, dirname
+from os.path import join, abspath, dirname, exists
+from os import remove, rmdir
 import docker
 from docker.types import Mount
 
@@ -54,6 +55,10 @@ def download_packages(packages, env_details):
         mounts=build_mounts_list(env_details),
         working_dir=CONTAINER_BASE_DIR,
     )
+    if exists(join(HOST_DL_DIR, 'partial')):
+        rmdir(join(HOST_DL_DIR, 'partial'))
+    if exists(join(HOST_DL_DIR, 'lock')):
+        remove(join(HOST_DL_DIR, 'lock'))
 
 
 dl_envs = read_environments(ENVIRONMENTS_FILE_PATH)
