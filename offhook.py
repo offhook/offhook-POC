@@ -1,5 +1,6 @@
 import json
-from os.path import join, abspath, dirname
+from os.path import join, abspath, dirname, exists
+from os import remove, rmdir
 import docker
 from docker.types import Mount
 
@@ -57,4 +58,4 @@ def download_packages(packages, env_details):
 
 
 dl_envs = read_environments(ENVIRONMENTS_FILE_PATH)
-download_packages('nano', dl_envs['centos7'])
+download_packages('nano', dl_envs['ubuntu'])

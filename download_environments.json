@@ -4,5 +4,11 @@
     "image": "centos:7",
     "script": "centos.sh",
     "additional_files": []
+  },
+  "ubuntu": {
+    "title": "Ubuntu 19.04",
+    "image": "ubuntu:19.04",
+    "script": "ubuntu.sh",
+    "additional_files": []
   }
 }
