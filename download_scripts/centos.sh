@@ -2,6 +2,8 @@
 # Source: https://access.redhat.com/solutions/10154
 
 # TODO: Enable EPEL repository
+yum install -y epel-release
+
 
 #(RHEL5)
 # yum install yum-downloadonly
